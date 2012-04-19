@@ -1,0 +1,72 @@
+/*
+	Class: RailFence.java
+	Created By: Cory Bohon 
+	Created On: 18 April 2012
+	Purpose: Class that implements a Rail-Fence cipher to a depth of 2.
+*/
+
+class RailFence
+{
+	//instance variables
+	int depth;
+	String depth1;
+	String depth2;
+	
+	/*
+	
+	*/
+	public RailFence()
+	{
+		clearAllDepths();
+		depth = 2;
+		
+	}//end constructor
+
+	/*
+	
+	*/
+	public String encrypt(String text)
+	{
+		clearAllDepths();
+		
+		boolean boolSwitch = true;
+		
+		for(int counter = 0; counter < text.length(); counter++)
+		{
+			if(boolSwitch)
+			{
+				depth1 += text.charAt(counter);
+				boolSwitch = false;
+			}
+			else
+			{
+				depth2 += text.charAt(counter);
+				boolSwitch = true;
+			}
+		}
+		
+		String muxedString = depth1 + depth2;
+		
+		return muxedString;
+		
+		this.clearAllDepths();
+	}
+	
+	public String decrypt(String text)
+	{
+		clearAllDepths();
+		
+		
+		
+		clearAllDepths();
+	}
+	
+	/*
+	
+	*/
+	private void clearAllDepths()
+	{
+		depth1 = "";
+		depth2 = "";
+	}
+}

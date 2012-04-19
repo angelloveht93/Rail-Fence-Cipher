@@ -1,0 +1,16 @@
+
+public class RailFenceDemo {
+
+	public static void main(String[] args) 
+	{
+		
+		RailFence fence = new RailFence();
+		
+		String myString = fence.encrypt("My nam");
+		
+		fence.decrypt(myString);
+		
+		System.out.println(myString);
+	}
+
+}

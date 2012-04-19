@@ -1,0 +1,25 @@
+/*
+ * @author		Cory Bohon <cory@corybohon.com>
+ * 
+ * Purpose		Demonstrate the RailFence cipher in action
+ * 
+ */
+
+public class RailFenceDemo 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		RailFence fence = new RailFence();
+		
+		String myString = fence.encrypt("This is my name...");
+		
+		System.out.println(myString);
+		
+		String decryptedString = fence.decrypt(myString);
+		
+		System.out.println(decryptedString);
+	}
+
+}

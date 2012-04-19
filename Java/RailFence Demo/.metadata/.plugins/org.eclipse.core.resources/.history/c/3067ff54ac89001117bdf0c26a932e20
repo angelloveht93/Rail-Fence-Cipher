@@ -1,0 +1,33 @@
+/*
+ * @author		Cory Bohon <cory@corybohon.com>
+ * 
+ * Purpose		Demonstrate the RailFence cipher in action
+ * 
+ */
+
+public class RailFenceDemo 
+{
+
+	public static void main(String[] args) 
+	{
+		//string to be encrypted
+		String originalText = "This is my name..."
+			
+		//Print out the original string
+		System.out.println("Original Text" + originalText);
+		
+		//create a new RailFence object
+		RailFence fence = new RailFence();
+		
+		//call the method encrypt in the RailFence class to encrypt the passed originalText 
+		//store the return in the encryptedString  
+		String encryptedString = fence.encrypt(originalText);
+		
+		System.out.println(myString);
+		
+		String decryptedString = fence.decrypt(myString);
+		
+		System.out.println(decryptedString);
+	}
+
+}
